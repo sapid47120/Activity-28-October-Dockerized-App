@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: node_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=addressbook
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: addressbook
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
