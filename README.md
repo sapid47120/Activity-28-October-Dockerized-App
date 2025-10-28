@@ -142,7 +142,3 @@ Riphah International University – I-14 Campus
 ```
 
 ---
-
-Would you like me to make this README **more report-style** (like for PDF submission) with section titles such as *Objective*, *Tools Used*, *Implementation*, *Results*, and *Conclusion*?  
-I can convert it into a ready-to-submit `.pdf` version next.
-```
